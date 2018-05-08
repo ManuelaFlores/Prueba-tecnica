@@ -2,18 +2,18 @@
 
 // a function that calculates the length of an array :
 function numberOfCharacters(array) {
-	var counter= 0;
-for(var i = 0; i<array.length ; i++){
-	counter++
-}
-return counter;
+  var counter = 0;
+  for (var i = 0; i < array.length; i++) {
+    counter++
+  }
+  return counter;
 }
 
 // get longest name :
 function getLongestName(array) {
-  var max = 0;
-  for (var i = 0; i < array.length; i++) {
-    numberOfCharacters(array[i]) > max ? max = array[i] : '';
+  var max = '';
+  for (var j = 0; j < array.length; j++) {
+     numberOfCharacters(array[j]) > numberOfCharacters(max) ? max = array[j] : '';
   }
   return max;
 }
@@ -31,4 +31,13 @@ function sorting(array) {
     }
   }
   return array;
+}
+
+// Making a list :
+function list(array) {
+  var string = '';
+  for (var i = 0; i < array.length; i++) {
+    string += '-  ' + array[i] + '<br>';
+  }
+  return string
 }
