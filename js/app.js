@@ -12,14 +12,12 @@ function begin() {
 
   //
   function firstHandler() {
-   console.log('primer click');
    highestNum.textContent = highestNumber(arrayOfNumbers);
    minimunNum.textContent = minimunNumber(arrayOfNumbers);
    secondHighest.textContent = secondHighestNumber(arrayOfNumbers);
   }
 
   function secondHandler() {
-    console.log('second');
     longestName.textContent = getLongestName(arrayOfStrings);
     orderList.innerHTML = list(sorting(arrayOfStrings));
 
