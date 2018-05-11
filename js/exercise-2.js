@@ -1,43 +1,43 @@
 //Solution to excercise 2 :
 
 // a function that calculates the length of an array :
-function numberOfCharacters(array) {
+function numberOfCharacters(element) {
   var counter = 0;
-  for (var i = 0; i < array.length; i++) {
-    counter++
-  }
+  for (var i = 0; i < element.length; i++) {
+    counter++;
+  };
   return counter;
-}
+};
 
 // get longest name :
-function getLongestName(array) {
+function getLongestName(collection) {
   var max = '';
-  for (var j = 0; j < array.length; j++) {
-     numberOfCharacters(array[j]) > numberOfCharacters(max) ? max = array[j] : '';
-  }
+  for (var j = 0; j < collection.length; j++) {
+     numberOfCharacters(collection[j]) > numberOfCharacters(max) ? max = collection[j] : '';
+  };
   return max;
-}
+};
 
 // Sorting names :
-function sorting(array) {
+function sorting(collection) {
   var temp = null;
-  for (var j = 0; j < array.length; j++) {
-    for (var i = 0; i < array.length; i++) {
-      if (array[i + 1] < array[i]) {
-        temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-      }
-    }
-  }
-  return array;
-}
+  for (var j = 0; j < collection.length; j++) {
+    for (var i = 0; i < collection.length; i++) {
+      if (collection[i + 1] < collection[i]) {
+        temp = collection[i];
+        collection[i] = collection[i + 1];
+        collection[i + 1] = temp;
+      };
+    };
+  };
+  return collection;
+};
 
 // Making a list :
-function list(array) {
+function list(collection) {
   var string = '';
-  for (var i = 0; i < array.length; i++) {
-    string += '-  ' + array[i] + '<br>';
-  }
-  return string
-}
+  for (var i = 0; i < collection.length; i++) {
+    string += '-  ' + collection[i] + '<br>';
+  };
+  return string;
+};

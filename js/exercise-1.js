@@ -1,32 +1,31 @@
 // Solution to excercise 1 :
 
 // a function that calculates the highest number of an array  :
-function highestNumber(array) {
+function highestNumber(collection) {
   var temp = -Infinity;
-
-  for (var i = array.length; i >= 0; i--) {
-    array[i] > temp ? temp = array[i] : '';
+  for (var i = collection.length; i >= 0; i--) {
+    collection[i] > temp ? temp = collection[i] : '';
   };
   return temp;
 };
 
 // a function that calculates the minimum number:
 
-function minimunNumber(array) {
+function minimunNumber(collection) {
   var temp = Infinity;
-  for (var i = array.length; i >= 0; i--) {
-    array[i] < temp ? temp = array[i] : '';
+  for (var i = collection.length; i >= 0; i--) {
+    collection[i] < temp ? temp = collection[i] : '';
   };
   return temp;
 };
 
 // a function that calculates the second highest number :
 
-function secondHighestNumber(array) {
-  var first = highestNumber(array);
+function secondHighestNumber(collection) {
+  var first = highestNumber(collection);
   var second = -Infinity;
-    for (var j = 0; j < array.length; j++) {
-    array[j] > second && array[j] !== first ? second = array[j] : '';
+    for (var j = 0; j < collection.length; j++) {
+    collection[j] > second && collection[j] !== first ? second = collection[j] : '';
   };
   return second;
 };
