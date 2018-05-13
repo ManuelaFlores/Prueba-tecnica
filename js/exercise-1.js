@@ -1,9 +1,9 @@
 // Solution to excercise 1 :
 
 // a function that calculates the highest number of an array  :
-function highestNumber(collection) {
-  var temp = -Infinity;
-  var i = 0
+const highestNumber = (collection) => {
+  let temp = -Infinity;
+  let i = 0
   for (; i < collection.length; i++) {
     collection[i] > temp ? temp = collection[i] : '';
   };
@@ -11,9 +11,9 @@ function highestNumber(collection) {
 };
 
 // a function that calculates the minimum number:
-function minimunNumber(collection) {
-  var temp = Infinity;
-  var i = 0;
+const minimunNumber = (collection) => {
+  let temp = Infinity;
+  let i = 0;
   for (; i < collection.length; i++) {
     collection[i] < temp ? temp = collection[i] : '';
   };
@@ -21,11 +21,11 @@ function minimunNumber(collection) {
 };
 
 // a function that calculates the second highest number :
-function secondHighestNumber(collection) {
-  var first = highestNumber(collection);
-  var counter = 0;
-  var second = -Infinity;
-  var i = 0;
+const secondHighestNumber = (collection) => {
+  let first = highestNumber(collection);
+  let counter = 0;
+  let second = -Infinity;
+  let i = 0;
   for (; i < collection.length; i++) {
     if (collection[i] > second && collection[i] === first) {
       counter++;

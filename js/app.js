@@ -1,23 +1,23 @@
-function begin() {
+const begin = () => {
   // naming variables:
-  var firstSolution = document.querySelector('.solution-1-js');
-  var secondSolution = document.querySelector('.solution-2-js');
-  var highestNum = document.querySelector('.highest-number-js');
-  var minimunNum = document.querySelector('.minimunNumber-js');
-  var secondHighest = document.querySelector('.second-highest-number-js');
-  var longestName = document.querySelector('.longest-name-js');
-  var orderList = document.querySelector('.order-list');
-  var arrayOfNumbers = [45, 75, 200, 256, 1, 27];
-  var arrayOfStrings = ['erik', 'leonardo', 'andres', 'gerardo', 'jan', 'renzo'];
+  let firstSolution = document.querySelector('.solution-1-js');
+  let secondSolution = document.querySelector('.solution-2-js');
+  let highestNum = document.querySelector('.highest-number-js');
+  let minimunNum = document.querySelector('.minimunNumber-js');
+  let secondHighest = document.querySelector('.second-highest-number-js');
+  let longestName = document.querySelector('.longest-name-js');
+  let orderList = document.querySelector('.order-list');
+  const arrayOfNumbers = [45, 75, 200, 256, 1, 27];
+  const arrayOfStrings = ['erik', 'leonardo', 'andres', 'gerardo', 'jan', 'renzo'];
 
   // event handlers:
-  function firstHandler() {
+  const firstHandler = () => {
     highestNum.textContent = highestNumber(arrayOfNumbers);
     minimunNum.textContent = minimunNumber(arrayOfNumbers);
     secondHighest.textContent = secondHighestNumber(arrayOfNumbers);
   };
 
-  function secondHandler() {
+  const secondHandler = () => {
     longestName.textContent = getLongestName(arrayOfStrings);
     orderList.innerHTML = list(sorting(arrayOfStrings));
   };
